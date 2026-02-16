@@ -1,0 +1,17 @@
+# Executables
+glslViewer.exe
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Rendered output
+*.mp4
+*.mov
+*.png
+*.raw
+
+# IDE/Tools
+.claude/
