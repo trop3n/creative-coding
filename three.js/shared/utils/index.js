@@ -15,3 +15,11 @@ export {
   disposeObject,
   disposeScene
 } from './helpers.js';
+export { 
+  createVideoRecorder,
+  createGifRecorder,
+  createHighQualityRecorder,
+  create4KRecorder,
+  addRecordingControls,
+  addRecordingKeyboardShortcuts
+} from './recording.js';

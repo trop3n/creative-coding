@@ -198,6 +198,38 @@ Navigate to a book directory and run:
 - `createSphere(radius, color)` - Quick sphere mesh
 - `createPlane(width, height, color)` - Quick plane mesh
 
+### Video Recording 🎬
+- `createVideoRecorder(renderer, options)` - Record animations as video
+- `createGifRecorder(renderer, options)` - Record as GIF
+- `create4KRecorder(renderer, options)` - Record at 4K resolution
+- `addRecordingControls(gui, recorder)` - Add GUI recording buttons
+- `addRecordingKeyboardShortcuts(recorder)` - Add R to record, ESC to stop
+
+**Quick Example:**
+```javascript
+import { createVideoRecorder } from '@shared/utils/index.js';
+
+const recorder = createVideoRecorder(renderer, {
+  width: 1920,
+  height: 1080,
+  framerate: 60,
+  format: 'webm'
+});
+
+recorder.start();
+
+function animate() {
+  renderer.render(scene, camera);
+  recorder.capture();
+  requestAnimationFrame(animate);
+}
+
+// Stop and download
+recorder.stop();
+```
+
+See [VIDEO_RECORDING.md](./VIDEO_RECORDING.md) for full documentation.
+
 ## 🔧 Editor Configuration
 
 ### VS Code
@@ -242,6 +274,7 @@ Navigate to a book directory and run:
 - Ch 08: Loading Models
 - Ch 09: Going Live
 - Ch 10: Final Project
+- Ch 11: Video Recording 🎬 *Export animations as video*
 
 ## 🐛 Troubleshooting
 
