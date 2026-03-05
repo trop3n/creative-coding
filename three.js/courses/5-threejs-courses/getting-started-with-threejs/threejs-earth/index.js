@@ -17,25 +17,48 @@ earthGroup.rotation.z = -23.4 * Math.PI / 180;
 scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 
+const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(1, 12);
+const geometry = new THREE.IcosahedronGeometry(1, detail);
 const material = new THREE.MeshStandardMaterial({
     map: loader.load("./textures/00_earthmap1k.jpg"),
-    flatShading: true,
+    flatShading: false,
 });
 const earthMesh = new THREE.Mesh(geometry, material);
-scene.add(earthMesh);
+earthGroup.add(earthMesh);
+const lightsMat = new THREE.MeshBasicMaterial({
+  map: loader.load("./textures/03_earthlights1k.jpg"),
+  blending: THREE.AdditiveBlending,
+});
+const lightsMesh = new THREE.Mesh(geometry, lightsMat);
+earthGroup.add(lightsMesh);
 
-const stars = getStarfield();
+const cloudsMat = new THREE.MeshStandardMaterial({
+    map: loader.load("./textures/04_earthcloudmap.jpg"),
+    transpartent: true,
+    opacity: 0.8,
+    blending: THREE.AdditiveBlending,
+});
+const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
+cloudsMesh.scale.setScalar(1.003);
+earthGroup.add(cloudsMesh);
+
+const stars = getStarfield({numStars: 2000});
 scene.add(stars);
 
-const hemiLight = new THREE.HemisphereLight();
-scene.add(hemiLight);
+// const hemiLight = new THREE.HemisphereLight();
+// scene.add(hemiLight);
+const dirLight = new THREE.DirectionalLight(0xffffff);
+scene.add(dirLight);
+dirLight.position.set(-2, 0.5, 1.5);
 function animate() {
     requestAnimationFrame(animate)
 
-    earthMesh.rotation.x += 0.001;
+    // earthMesh.rotation.x += 0.001;
     earthMesh.rotation.y += 0.002;
+    lightsMesh.rotation.y += 0.002;
+    cloudsMesh.rotation.y += 0.002;
+    // lightsMat.rotation.y += 0.002;
     renderer.render(scene, camera);
 }
 
