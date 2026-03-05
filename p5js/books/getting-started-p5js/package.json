@@ -1,0 +1,17 @@
+{
+  "name": "getting-started-p5js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5178",
+    "build": "vite build",
+    "preview": "vite preview --port 5178"
+  },
+  "dependencies": {
+    "p5": "^1.9.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

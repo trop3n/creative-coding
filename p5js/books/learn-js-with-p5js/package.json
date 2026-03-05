@@ -1,0 +1,17 @@
+{
+  "name": "learn-js-with-p5js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5176",
+    "build": "vite build",
+    "preview": "vite preview --port 5176"
+  },
+  "dependencies": {
+    "p5": "^1.9.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

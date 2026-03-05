@@ -1,0 +1,22 @@
+{
+  "name": "p5js-learning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "p5.js learning environment with workspaces for multiple books",
+  "workspaces": [
+    "books/*"
+  ],
+  "scripts": {
+    "learn": "npm run dev -w books/learn-js-with-p5js",
+    "generative": "npm run dev -w books/generative-design",
+    "getting-started": "npm run dev -w books/getting-started-p5js",
+    "build:learn": "npm run build -w books/learn-js-with-p5js",
+    "build:generative": "npm run build -w books/generative-design",
+    "build:getting-started": "npm run build -w books/getting-started-p5js",
+    "install:all": "npm install"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
