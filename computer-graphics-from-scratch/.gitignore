@@ -1,0 +1,17 @@
+# Binaries
+raytracer
+rasterizer
+*.out
+*.o
+
+# Generated images
+*.ppm
+*.png
+*.jpg
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
