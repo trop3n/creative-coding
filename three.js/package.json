@@ -1,0 +1,23 @@
+{
+  "name": "threejs-learning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three.js learning environment with workspaces for multiple books",
+  "workspaces": [
+    "shared",
+    "books/*"
+  ],
+  "scripts": {
+    "discover": "npm run dev -w books/discover-three-js",
+    "learn": "npm run dev -w books/learn-threejs-4th-ed",
+    "interactive": "npm run dev -w books/interactive-web-threejs-aframe",
+    "build:discover": "npm run build -w books/discover-three-js",
+    "build:learn": "npm run build -w books/learn-threejs-4th-ed",
+    "build:interactive": "npm run build -w books/interactive-web-threejs-aframe",
+    "install:all": "npm install"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@threejs-learning/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "utils/index.js",
+  "exports": {
+    ".": "./utils/index.js",
+    "./lighting": "./utils/lighting.js",
+    "./controls": "./utils/controls.js",
+    "./loaders": "./utils/loaders.js",
+    "./helpers": "./utils/helpers.js"
+  },
+  "peerDependencies": {
+    "three": "^0.160.0"
+  }
+}

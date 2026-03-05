@@ -1,0 +1,19 @@
+{
+  "name": "discover-three-js",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --port 5173"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "stats.js": "^0.17.0",
+    "lil-gui": "^0.19.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

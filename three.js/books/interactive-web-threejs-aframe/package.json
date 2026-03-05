@@ -1,0 +1,20 @@
+{
+  "name": "interactive-web-threejs-aframe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5175",
+    "build": "vite build",
+    "preview": "vite preview --port 5175"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "aframe": "^1.4.0",
+    "stats.js": "^0.17.0",
+    "lil-gui": "^0.19.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
