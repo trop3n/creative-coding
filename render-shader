@@ -1,0 +1,6 @@
+#!/bin/sh
+# Launcher for render_shader.py using the project venv. Symlink-safe.
+SELF="$0"
+[ -L "$SELF" ] && SELF="$(readlink -f "$SELF")"
+DIR="$(cd "$(dirname "$SELF")" && pwd)"
+exec "$DIR/.venv/bin/python" "$DIR/render_shader.py" "$@"
